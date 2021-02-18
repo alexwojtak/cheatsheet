@@ -1,0 +1,31 @@
+#titleContainer h1{
+	background-color: #3C6E71;
+	display: inline;
+	border-radius: 5px;
+	padding: 3px 10px;
+}
+h1, h2, h3, h4, h5, h6{
+	margin: 1px;
+	padding: 1px;
+}
+body{
+	background-color: #D9D9D9;
+	color: #284B63;
+}
+main{
+	column-count: 3;
+}
+.inline{
+	display: inline;
+}
+.textCenter{
+	text-align: center;
+}
+#titleContainer{
+	display: inline;
+	padding: 5px;
+	border-radius: 15%;
+}
+#table{
+	font-family: monospace;
+}

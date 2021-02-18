@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Markdown cheat sheet</title>
+	<link rel="stylesheet" type="text/css" href="mdstyle.css">	
+</head>
+<body>
+	<div class="textCenter">
+		<span id="titleContainer">
+			<h1>Abbreviated Markdown Cheat Sheet</h1>
+		</span>
+	</div>
+	<br>
+	<main>
+	<h2>Headers</h2>
+# H1 gives <h1 class="inline">H1</h1> <br>
+## H2 gives <h2 class="inline">H2</h2> <br>
+### H3 gives <h3 class="inline">H3</h3> <br>
+#### H4 gives <h4 class="inline">H4</h4> <br>
+##### H5 gives <h5 class="inline">H5</h5> <br>
+###### H6 gives <h6 class="inline">H6</h6> <br>
+
+Other headers:<br>
+
+You can also do a heading like this<br>
+=====================<br>
+...or like this<br>
+--------------------<br>
+
+<h2>Emphasis</h2>
+
+*Asterisks* give <em>Italics</em><br>
+
+**Two asterisks makes it <b>bold</b>**<br>
+
+**_Two asterisks and an underscore gives <strong><em>both</em></strong>_**<br>
+
+~~Two tildes for <del>Strikethrough</del>~~<br>
+
+<h2>Lists</h2>
+
+<ol>
+	<li>
+		Start ordered lists
+	</li>
+	<li>
+		...with a number
+	</li>
+	<li>
+		<ul>
+			<li>
+				two spaces prefix a
+			</li>
+			<li>
+				...sublist item.
+			</li>
+		</ul>
+	</li>
+	<li>
+		*, + and - all work
+	</li>
+	<li>
+		...as list prefixes
+	</li>
+</ol>
+
+<h2>Other formatting</h2>
+
+<p>triple spaces prefix indented text for paragraphs</p>
+<p>...and use two trailing spaces for newline</p>
+
+<h2>Links and images</h2>
+
+[This is one way to do a link](https://www.google.com)<br>
+
+To add an image:<br>
+![alt](https://a.b.com.img.jpg "Title")<br>
+or<br>
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+<h2>Styling Code</h2>
+Use `backticks` to style something as code.<br>
+
+<code>Like so</code><br>
+
+You can also surround code with three backticks, and make the first line a coding language for syntax highlighting in some renderers.<br>
+
+<code>
+```javascript<br>
+var s = "JavaScript syntax highlighting";<br>
+alert(s);<br>
+```<br>
+</code>
+<h2>Tables</h2>
+Tables may be used in Github readme's as github uses GFM (github flavoured markdown)<br>
+
+Colons can be used to align columns.<br>
+<br>
+<div id="table">
+| This          | will          | not      |<br>
+| ------------- |:-------------:| --------:|<br>
+| look          | like          | such     |<br>
+| a             | mess          | when     |<br>
+| rendered      | in            | markdown |<br>
+</div>
+<br>
+3 dashes minimum, and the pipes are optional.<br>
+
+<h2>Other</h2>
+
+Start a blockquote with a &gt;. <br>
+
+Raw html may also be used in markdown.
+
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
+
+Do a horizontal ruled line with at least three periods, hyphens, asterisks, or underscores.<br>
+<hr>
+
+Referencing a bug by #bugID in your git commit links it to the slip.
+
+</main>
+	<footer>
+		Original markdown information from <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam Pritchard</a>
+	</footer>
+</body>
+</html>
