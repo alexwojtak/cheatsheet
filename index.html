@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
 	<meta charset="utf-8">
 	<title>Markdown cheat sheet</title>
@@ -11,7 +12,7 @@
 		</span>
 	</div>
 	<br>
-	<main>
+	<div class="topic">
 		<h2>Headers</h2>
 		# H1 gives <h1 class="inline">H1</h1> <br>
 		## H2 gives <h2 class="inline">H2</h2> <br>
@@ -122,8 +123,97 @@
 		<hr>
 
 		Referencing a bug by #bugID in your git commit links it to the slip.
+		<!--Closing div tag marking end of markdown section -->
+	</div>
+		<div class="textCenter">
+			<span id="titleContainer">
+				<h1>Javascript Notes</h1>
+			</span>
+		</div>
 
-	</main>
+	<div class="topic">
+		To create a new DOM element, use <code>document.createElement('[element name]');</code>
+		for example, <br>
+		<code>
+			let newDestination = document.createElement('li');
+		</code>
+		
+		Then add properties and destination using, for example,<br>
+		<code>
+			newDestination.id = 'myId';
+			newDestination.innerHTML = 'Hello World';
+		</code>
+		You can create a child element with:
+		<code>
+			document.getElementById('myId').appendChild(newDestination);
+		</code>
+		You can also select ids by <code>querySelector("#myId")</code> or classes by <code>querySelector(".myClass");</code><br>
+		
+		Change styling elements with <code>element.style.selector = 'value';</code><br>
+		Example: <code>document.getElementById('myId').style.backgroundColor = 'red';</code><br>
+		<h2>Event Listeners</h2>
+		With event listeners, when you do something to 'A' it affects 'B'. <br>
+		'A' is the event target. The 'something' is the event handler.<br>
+		'B' may or may not be different from 'A'.<br>
+		Select your DOM element:
+		<code>
+			const selectedDOMElement = document.getElementById('myId');
+		</code>
+		Write what happens when you do the thing (write the event handler).<br>
+		<code>
+			function myEventHandler(){
+				someOtherDOMElement.style.backgroundColor = 'red';
+			}
+		</code>
+		Now you are ready to add an event listener<br>
+		<code>
+			selectedDOMElement.addEventListener('click', myEventHandler);
+		</code>
+		Find alternatives to 'click' <a href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_Events">here</a>. <br> 
+		Options include 'wheel' for the mousewheel moving, 'dblclick' for doubleclick, or 'auxclick' for a mouse click that isn't the main mouse button (right click or additional button).<br>
+		Remember to remove event listeners with 'removeEventListener' when they are done with.<br>
+
+	</div>
+	<div class="textCenter">
+			<span id="titleContainer">
+				<h1>Forms</h1>
+			</span>
+		</div>
+
+	<div class="topic">
+		Start and end a form with &lt;form&gt; tags.	
+		Create input elements with &lt;input&gt; tags, and set attributes of type and name. <br>
+		Labels before an input element can be related to the element with the for element, e.g.:<br>
+		<code>for="element1"</code><br>  
+		Where element1 is the name attribute of the input element.<br>
+		Possibilities for input type are:<br>
+		<ul>
+			<li>button</li>
+			<li>checkbox</li>
+			<li>color</li>
+			<li>date</li>
+			<li>datetime-local</li>
+			<li>email</li>
+			<li>file</li>
+			<li>hidden</li>
+			<li>image</li>
+			<li>month</li>
+			<li>number</li>
+			<li>password</li>
+			<li>radio</li>
+			<li>range</li>
+			<li>reset</li>
+			<li>search</li>
+			<li>submit</li>
+			<li>tel</li>
+			<li>text</li>
+			<li>time</li>
+			<li>url</li>
+			<li>week</li>
+		</ul>
+
+	</div>
+
 	<footer>
 		Original markdown information from <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam Pritchard</a>
 	</footer>
