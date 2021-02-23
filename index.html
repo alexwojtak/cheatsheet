@@ -185,7 +185,7 @@
 		Create input elements with &lt;input&gt; tags, and set attributes of type and name. <br>
 		Labels before an input element can be related to the element with the for element, e.g.:<br>
 		<code>for="element1"</code><br>  
-		Where element1 is the name attribute of the input element.<br>
+		Where element1 is the ID attribute of the input element.<br>
 		Possibilities for input type are:<br>
 		<ul>
 			<li>button</li>
@@ -211,7 +211,66 @@
 			<li>url</li>
 			<li>week</li>
 		</ul>
+		Inputs do not need closing tags.<br>
 
+	</div>
+	<div class="textCenter">
+			<span id="titleContainer">
+				<h1>Flexbox</h1>
+			</span>
+	</div>
+	<div class="topic">
+		To use flex properties, make the parent display: flex, and the children will become flex items.<br>
+		If you need the parent to be inline and not block, use display: inline-flex;<br>
+		Horizontal positioning of flex-items is done with <code>justify-content</code><br>
+		Vertical positioning uses <code>align-items</code><br>  
+		Both use:<br>
+		<ul>
+			<li>flex-start</li>
+			<li>flex-end</li>
+			<li>center</li>
+		</ul>
+		but justify content uses:<br>
+		<ul>
+			<li>space-between</li>
+			<li>space-around</li>
+			<li>space-evenly</li>
+		</ul>
+		while align-items uses:<br>
+		<ul>
+			<li>baseline</li>
+			<li>stretch</li>
+		</ul>
+		The align-content property differs from align-items in that it is for multiple rows, rather than aligning a single row. Valid values are:<br>
+		<ul>
+			<li>flex-start</li>
+			<li>flex-end</li>
+			<li>center</li>
+			<li>space-between</li>
+			<li>space-around</li>
+			<li>stretch</li>
+		</ul>
+		The <code>flex</code> property is for flex items, and determines how they grow or shrink. <br>
+		Valid properties are:
+		<ul>
+			<li>flex-grow</li>
+			<li>flex-shrink</li>
+			<li>flex-basis</li>
+		</ul>
+		and these can all be defined on one line, as:<br>
+		<code>flex: [flex-grow value] [flex-shrink value] [flex-basis value]</code>
+		Flex-wrap determines the wrapping properties. Valid paramaters are: 
+		<ul>
+			<li>nowrap</li>
+			<li>wrap</li>
+			<li>wrap-reverse</li>
+		</ul>
+		Flex-direction determines if the items go left/right, up/down, using row, column, row-reverse, and column-reverse.<br>  
+		Flex-wrap and flex-direction can be determined together with flex-flow. e.g.<br>
+		<code>
+			flex-flow: row wrap;
+		</code>
+		
 	</div>
 
 	<footer>
