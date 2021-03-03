@@ -125,6 +125,7 @@
 		Referencing a bug by #bugID in your git commit links it to the slip.
 		<!--Closing div tag marking end of markdown section -->
 	</div>
+		<!--Start of Javascript notes-->
 		<div class="textCenter">
 			<span id="titleContainer">
 				<h1>Javascript Notes</h1>
@@ -172,8 +173,53 @@
 		Find alternatives to 'click' <a href="https://developer.mozilla.org/en-US/docs/Web/Events#Mouse_Events">here</a>. <br> 
 		Options include 'wheel' for the mousewheel moving, 'dblclick' for doubleclick, or 'auxclick' for a mouse click that isn't the main mouse button (right click or additional button).<br>
 		Remember to remove event listeners with 'removeEventListener' when they are done with.<br>
+		<h2>Classes</h2><br>
+		To create a class:<br>
+		<code>
+			class MyClass {<br>
+				constructor(a, b){ //a, b are required paramaters to construct the object<br>
+					this._a = a;<br>
+					this._b = b;<br>
+					this._c = "Some Variable";<br>
+				}<br>
+<br>
+				//To add a getter<br>
+				get a() {<br>
+					return this._a;<br>
+				{<br>
+<br>
+				//To add a setter<br>
+				set a(aValueIAmAdding){<br>
+					this._a = aValueIAmAdding;<br>
+				}<br>
+<br>
+				//To add a method (e.g.)<br>
+				myMethod(x) {<br>
+					this._a += x;<br>
+				}<br>
+<br>
+				//To add a static method<br>
+				static myStaticMethod(Y) {<br>
+					this._b += Y;<br>
+				}<br>
+			{<br>
+<br>
+		</code><br>
+		To create a child class inheriting from a parent:<br>
+		<code><br>
+			class ExampleChildClass extends MyClass {<br>
+				constructor(a, b, c, d, e){<br>
+					super(a, b){<br>
+						this._d = d;<br>
+						etc...<br>
+					}<br>
+				}<br>
+			}<br>
+		</code>
 
 	</div>
+	<!--End of Javascript section-->
+	<!--Start of Forms section-->
 	<div class="textCenter">
 			<span id="titleContainer">
 				<h1>Forms</h1>
