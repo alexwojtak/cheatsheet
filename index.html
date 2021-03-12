@@ -21,8 +21,6 @@
 		##### H5 gives <h5 class="inline">H5</h5> <br>
 		###### H6 gives <h6 class="inline">H6</h6> <br>
 
-		Other headers:<br>
-
 		You can also do a heading like this<br>
 		=====================<br>
 		...or like this<br>
@@ -319,7 +317,47 @@
 		</code>
 		
 	</div>
-
+	<div class="textCenter">
+		<span id="titleContainer">
+			<h1>Git/Github</h1>
+		</span>
+	</div>
+	<div class="topic">
+		Git is a version control system. <br>
+		This means that when working on a project, it allows you the control to set each version, see the entire history of all versions, and even go back to earlier versions of a project. 
+		Git and Github use a large number of specific terms which have their own meaning within the version control system. A list of the more commonly used terms follows:<br>
+		<ul>
+			<li>commit</li>
+			<li>init</li>
+			<li>repository (or 'repo')</li>
+			<li>staging</li>
+			<li>clone</li>
+			<li>branch</li>						
+			<li>main (formerly 'master')</li>
+			<li>head</li>
+			<li>checkout</li>
+			<li>push</li>
+			<li>pull</li>
+			<li>merge</li>
+			<li>rebase</li>
+			<li>reset</li>
+			<li>revert</li>
+			<li>cherry-pick</li>
+			<li>remote</li>
+		</ul>
+		When you want to start a project and use git, you can use the command:
+		<code>git init</code>
+		to 'initialise' the version control. This makes a folder which keeps track of all your changes and versions. <br>
+		As you might have files in that folder which are nothing to do with your project, or you don't want to keep track of, you specify which files you want to keep track of by adding them each time. <br>
+		You do this by typing: <br>
+		<code>git add myfile.txt</code>
+		Where 'myfile.txt' is just whatever file you want to add. <br>  
+		These files aren't instantly tracked. You may want to add more files. When you have added all the files, you then have to commit to this change by using the 'commit' command. This command allows you to also add a message describing what changes you have made. For example:<br>
+		<code>git commit -m "Start my new project"</code>
+		We call this making a 'commit', and refer to each point where you have made a change like this as 'a commit'. <br>
+		As you start by adding the files, and then doing a commit, we refer to these files as being in a 'staging area' before the commit. <br>
+		
+	</div>
 	<footer>
 		Original markdown information from <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Adam Pritchard</a>
 	</footer>
