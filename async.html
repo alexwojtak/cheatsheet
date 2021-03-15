@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Asynchronous Coding</title>
+	<link rel="stylesheet" type="text/css" href="mdstyle.css">
+	<style type="text/css">
+		#executor:hover {
+			position: relative;
+		}
+		#executor:hover:after {
+			content: url(executor.png);
+			display: block;
+			position: absolute;
+			left: 123px;
+			top: 56px;
+		}
+	</style>
+</head>
+<body>
+	<div class="textCenter">
+		<span id="titleContainer">
+			<h1>
+				Asynchronous Coding
+			</h1>
+		</span>
+	</div>
+	<div class="topic">
+		To create a new promise function:<br>
+		<code>
+			const myNewPromise = new Promise(someFunction);
+		</code><br>
+		where 'someFunction' is your '<strong id="executor">executor</strong>' function.<br>
+		Example of an executor function:<br>
+		<code>
+			const someFunction = (resolve, reject) =&gt; {<br>
+				if(someCondition){<br>
+					resolve('I resolved');<br>
+				}<br>
+				else{<br>
+					reject('I rejected');<br>
+				}<br>
+			}<br>
+		</code><br>
+		So one example of how to use asynchronous functions like this would be to use a setTimeout command, which would wait for, up to, a given time.<br>
+		<code>
+			setTimeout(myFunctionWhichMayTakeAWhile, 2000);
+		</code><br>
+	</div>
+	<br>
+	<div class="topic">
+		<!--Closing div tag marking end of section -->
+	</div>
+	<footer>
+		<h4>
+			<a href="async.html">
+				Back to Main
+			</a>
+		</h4>
+	</footer>
+</body>
+</html>
