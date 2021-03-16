@@ -46,6 +46,52 @@
 		<code>
 			setTimeout(myFunctionWhichMayTakeAWhile, 2000);
 		</code><br>
+		To handle the case where the promise passes (where the 'resolve' condition is true), we use .then()<br>
+		<code>
+			const prom = new Promise((resolve, reject) =&gt; {<br>
+				resolve('I resolved');<br>
+				});<br>
+				const functionToHandleSuccess = (resolvedValue) =&gt; {<br>
+					console.log(resolvedValue);
+				};<br>
+				prom.then(functionToHandleSucess);<br>
+		</code>
+		This code will log the resolved value, here it is: 'I resolved'. <br> 
+		The full format using .then(), would be prom.then(a,b); where a is the function handling the 'resolve' condition, and b is the function handling the 'reject' condition.<br>
+		You can also write: <code>prom.then(a).then(null, b)</code> which has the same meaning.<br>
+		You can also replace the second 'then' with 'catch' which then only needs one thingy in the brackets. <br>
+		If you want a bunch of promises to all be checked together, use <code>Promise.all()</code><br>
+		<code>
+			let myPromises = Promise.all([returnsPromOne(), returnsPromTwo(), returnsPromThree()]);<br>
+			myPromises<br>
+			.then((arrayOfValues) =&gt; {<br>
+				console.log(arrayOfValues);<br>
+			})<br>
+			.catch((rejectionReason) =&gt; {<br>
+				console.log(rejectionReason);<br>
+			});<br>
+		</code>
+		Async functions can be defined as follows:<br>
+		<code>
+			async function myFunc() {};<br>
+			myFunc();<br>
+		</code><br>
+		or<br>
+		<code>
+			const myFunc = async () =&gt; {};<br>
+			myFunc();<br>
+		</code>
+		These async functions always return a promise, so you must correctly handle the returned promise.<br>
+		Example:<br>
+		<code>
+			async function myPromise(){ return 3; }<br>
+			myPromise()<br>
+			.then(resolvedValue =&gt; {<br>
+				console.log(resolvedValue);<br>
+			})<br>
+		</code>
+		This will log '3' to the console. As the thing that is returned is a promise with a resolved value of 3, we require the .then() to process the resolved value.<br>
+
 	</div>
 	<br>
 	<div class="topic">
