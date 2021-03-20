@@ -91,6 +91,21 @@
 			})<br>
 		</code>
 		This will log '3' to the console. As the thing that is returned is a promise with a resolved value of 3, we require the .then() to process the resolved value.<br>
+		Comparing promise with await/async:<br>
+		<code>
+			function handleAPromise() {<br>
+				myPromise().then((resolvedValue) =&gt; {<br>
+					console.log(resolvedValue);<br>
+				});<br>
+			}<br>
+		</code><br>
+		That's how you handle a returned promise with promises. With async/await, it's like:<br>
+		<code>
+			async function handleAPromise() {<br>
+				let resolvedValue = await myPromise();<br>
+				console.log(resolvedValue);<br>
+			}<br>
+		</code>
 
 	</div>
 	<br>
